@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .styled-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .styled-button:active {
+            background-color: #004080;
+            transform: scale(0.95);
+        }
+
+        #more-info {
+            display: none;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Romulo A. Dayandayan, an IT student.</p>
+            <p>I study at EVSU Ormoc City, and my course is BSIT.</p>
+            <button id="more-info-btn" class="styled-button">Click here to know more about me</button>
+            <div id="more-info">
+                <p>I'm 21 years old, a middle child, and a second-year student at EVSU. I may not be an exceptional student, but I know how to put my skills to use. </p>
+                <p>My professor once told me that it's alright to take a two-day vacation or play online games instead of studying all the time. After you take a break, just finish the tasks you left behind. </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Hobbies</h2>
+            <div class="project">
+                <img src="https://assets.onecompiler.app/42rfagwjv/434y7r384/471865367_584404297668015_7515139027181257906_n.jpg" 
+                     alt="Online gaming" 
+                     class="project-image">
+                <h3>Playing Online Games</h3>
+                <p class="hobby-description">When I am home, I enjoy playing online games as a way to unwind and relax after a long day. However, I am very mindful of my responsibilities, so I only play when I don’t have any assignments or projects to work on. I make sure to prioritize my studies and personal development first, but gaming serves as a great way to disconnect and refresh my mind when I find myself with some free time. It’s a fun and engaging activity that allows me to socialize with friends, explore new virtual worlds, and challenge myself in different ways..</p>
+            </div>
+            <div class="project">
+                <h3>Watching Anime</h3>
+                <img src="https://assets.onecompiler.app/42rfagwjv/434y7r384/that_time_i_got_reincarnated_as_a_slime_wallpaper_by_coolkat122_dexjj3f-pre.jpg"
+                       class="project-image">    
+                <p class="hobby-description">Another hobby of mine is watching anime during my free time. It’s a perfect escape for me, allowing me to immerse myself in captivating stories, fascinating characters, and vibrant worlds that are completely different from my daily routine. Anime helps me relax and recharge, providing a mental break from the stresses of work or study. Whether it's a lighthearted series or a more thought-provoking one, I find that anime not only entertains me but also inspires me. It allows me to explore various cultures, philosophies, and emotions in a way that’s both enjoyable and enriching. Plus, it’s a great way to unwind and recharge before tackling my next task or project.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form" method="POST" action="submit_form.php">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Romulo A. Dayandayan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('more-info-btn').addEventListener('click', function () {
+            const moreInfo = document.getElementById('more-info');
+            if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
+                moreInfo.style.display = 'block';
+                this.textContent = 'Hide details';
+            } else {
+                moreInfo.style.display = 'none';
+                this.textContent = 'Click here to know more about me';
+            }
+        });
+    </script>
+</body>
+</html>
